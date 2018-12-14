@@ -1,0 +1,12 @@
+filename = "Input.txt"
+lines = open(filename,'r').read().splitlines()
+#print(lines)
+total = 0
+for eachvalue in lines:
+        #print(eachvalue[1:])
+        if eachvalue[0] == "+":
+                total = total + int(eachvalue[1:])
+        elif eachvalue[0] == "-":
+                total = total - int(eachvalue[1:])
+
+print(total)
