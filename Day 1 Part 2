@@ -1,0 +1,23 @@
+filename = "Input.txt"
+lines = open(filename,'r').read().splitlines()
+x = True
+runningtotal = 0
+totals = []
+while x == True:
+        print(".")
+        
+        for eachvalue in lines:
+                if eachvalue[0] == "+":
+                        runningtotal = runningtotal + int(eachvalue[1:])
+                elif eachvalue[0] == "-":
+                        runningtotal = runningtotal - int(eachvalue[1:])
+                        
+        
+                if runningtotal not in totals:
+                        totals.append(runningtotal)
+                else:
+                        x = False
+                        break
+
+
+print(runningtotal)
